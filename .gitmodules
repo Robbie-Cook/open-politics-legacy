@@ -1,3 +1,6 @@
 [submodule "src/components"]
 	path = src/components
 	url = https://github.com/Robbie-Cook/React-Components.git
+[submodule "src/data"]
+	path = src/data
+	url = https://github.com/Robbie-Cook/React-Data.git

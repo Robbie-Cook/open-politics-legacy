@@ -1,0 +1,23 @@
+{
+  "name": "@robbie-cook/react-components",
+  "version": "1.0.0",
+  "description": "A set of common components for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robbie-Cook/React-Components.git"
+  },
+  "keywords": [
+    "common-components",
+    "React"
+  ],
+  "author": "Robbie Cook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Robbie-Cook/React-Components/issues"
+  },
+  "homepage": "https://github.com/Robbie-Cook/React-Components#readme"
+}

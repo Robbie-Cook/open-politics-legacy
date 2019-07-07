@@ -44,7 +44,7 @@ class WebPage extends Component {
   render() {
     return (
       <ColorsContext.Provider value={Colors}>
-        <MyHelmet /> {/* SEO Stuff */}
+        <MyHelmet title="OpenPolitics" /> {/* SEO Stuff */}
         <div>
           <NavigationBar />
           <div style={this.props.style}>

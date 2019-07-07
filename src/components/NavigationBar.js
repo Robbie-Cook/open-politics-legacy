@@ -41,6 +41,7 @@ class NavigationBar extends React.Component {
       z-index: 150;
       margin-left: 0;
       padding: 0;
+      height: ${Sizes.navbar.height};
       ${new MobileView(`
         margin-left: 20px;
       `)};

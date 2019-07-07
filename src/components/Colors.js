@@ -6,8 +6,8 @@ This is to be replaced with React.Context, where this is an object passed
 through a color context
 */
 class Colors {
-  static textColor = "#dcd6ce"
-  static backgroundColor = "#0f0f0f"
+  static textColor = "#FEFFFE"
+  static backgroundColor = "#F58C8C"
   
   // Link color
   static link = {
@@ -17,7 +17,7 @@ class Colors {
   }
 
   static text = {
-      color: '#dcd6ce' // also defined in global-styles.css
+      color: this.textColor // also defined in global-styles.css
   }
 
   static page = {

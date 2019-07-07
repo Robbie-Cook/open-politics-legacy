@@ -9,7 +9,7 @@ import Colors from "./Colors"
 class BorderBox extends Component {
   render() {
     const Box = styled.div`
-      border: 8px solid ${Colors.text.color};
+      border: ${this.props.border};
       border-radius: 4px;
       padding: 20px;
       display: flex;
@@ -45,6 +45,9 @@ BorderBox.propTypes = {
   // Whether to scroll horizontally or vertically.
   horizontalScroll: PropTypes.bool,
   verticalScroll: PropTypes.bool,
+}
+BorderBox.defaultProps = {
+  border: `8px solid ${Colors.text.color};`
 }
 
 export { BorderBox }

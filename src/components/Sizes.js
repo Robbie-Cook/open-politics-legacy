@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 
 class Sizes {
   static navbar = {
-    height: "64",
+    height: "64px",
   }
   static page = {
     sideMargin: "90px",

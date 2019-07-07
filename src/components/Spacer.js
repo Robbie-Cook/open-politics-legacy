@@ -9,20 +9,14 @@ import Dimensions from "./Dimensions"
  * Values must be given like so
  * <Spacer width="40px" />
  */
-class Spacer extends Component {
-  propTypes = {
-    width: PropTypes.string,
-    height: PropTypes.string,
-  }
-
-  render() {
-    const Spacer = styled.div`
-      height: ${this.props.height};
-      width: ${this.props.width};
-    `
-
-    return <Spacer />
-  }
+export default function Spacer(props) {
+  const StyledSpacer = styled.div`
+    height: ${props.height};
+    width: ${props.width};
+  `
+  return <StyledSpacer />
 }
-
-export default Spacer
+Spacer.propTypes = {
+  width: PropTypes.string,
+  height: PropTypes.string,
+}

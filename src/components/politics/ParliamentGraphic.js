@@ -6,31 +6,108 @@ import TransitionWrapper from "../animation/TransitionWrapper"
 import MemberPage from "./MemberPage"
 import Colors from "../Colors"
 
-class Button extends Component {
-  render() {
-    const size = this.props.size
-    const StyledButton = styled.div`
-      width: ${this.props.size};
-      height: ${this.props.size};
-      background-color: ${this.props.color};
-      border-radius: 100%;
-    `
-    return <StyledButton />
-  }
+function Seat(props) {
+  const StyledSeat = styled.div`
+    width: ${props.size};
+    height: ${props.size};
+    background-color: ${props.color};
+    border-radius: 100%;
+    margin: 5px;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: ${props.position[0]}px;
+    left: ${props.position[1]}px;
+  `
+  return <StyledSeat />
 }
-Button.propTypes = {
+Seat.propTypes = {
   color: PropTypes.string,
   size: PropTypes.string,
+  id: PropTypes.number,
+  position: PropTypes.arrayOf(PropTypes.number)
 }
-Button.defaultProps = {
-  color: "grey",
+Seat.defaultProps = {
+  color: Colors.text.color,
   size: "14px",
+  id: 0,
+  position: [0, 0]
 }
 
-// Sample component
+// ParliamentGraphic component
 class ParliamentGraphic extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      seatingData: null,
+      membersData: null,
+      partyData: null,
+    }
+    var db = Firestore.getDb()
+
+    // Updating functions bound to this
+    var updateSeatingData = function(data) {
+      this.setState({ seatingData: data })
+    }.bind(this)
+
+    var updateMembersData = function(data) {
+      this.setState({ membersData: data })
+    }.bind(this)
+
+    var updatePartyData = function(data) {
+      this.setState({ partyData: data })
+    }.bind(this)
+
+    // Queries for the data
+    db.collection("seats")
+      .get()
+      .then(querySnapshot => {
+        updateSeatingData(querySnapshot)
+      })
+
+    db.collection("members")
+      .get()
+      .then(querySnapshot => {
+        updateMembersData(querySnapshot)
+      })
+
+    db.collection("parties")
+      .get()
+      .then(querySnapshot => {
+        updatePartyData(querySnapshot)
+      })
+  }
+
+  generateSeats(seatingData) {
+    if (!seatingData) {
+      return
+    }
+
+    let jsxArray = []
+    seatingData.docs.forEach(element =>
+      jsxArray.push(<Seat id={element.id} position={element.position} />)
+    )
+    return jsxArray
+  }
+
+  size = "300px"
+  StyledSeatWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    width: ${this.size};
+    height: ${this.size};
+  `
+
   render() {
-    return <Button />
+    return (
+      <TransitionWrapper loaded={this.state.seatingData ? true : false}>
+        <this.StyledSeatWrapper>
+          {this.generateSeats(this.state.seatingData, this.positions)}
+        </this.StyledSeatWrapper>
+      </TransitionWrapper>
+    )
   }
 }
+
 export default ParliamentGraphic

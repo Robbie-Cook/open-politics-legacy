@@ -4,26 +4,16 @@ import { Heading } from "./typography"
 import { Col, Row, LayoutWrapper } from "../components/Layout"
 
 // Main Page component
-class Sample extends Component {
-    render() {
-      return (
-  
-        <WebPage>
-          <LayoutWrapper>
-            <Heading type="h1">Sample</Heading>
-            <Row>
-              <Col>
-                
-              </Col>
-              <Col>
-
-              </Col>
-            </Row>
-          </LayoutWrapper>
-        </WebPage>
-      );
-    }
-  }
-  
-  export default Sample;
-  
+export default function Sample(props) {
+  return (
+    <WebPage>
+      <LayoutWrapper>
+        <Heading type="h1">Sample</Heading>
+        <Row>
+          <Col></Col>
+          <Col></Col>
+        </Row>
+      </LayoutWrapper>
+    </WebPage>
+  )
+}

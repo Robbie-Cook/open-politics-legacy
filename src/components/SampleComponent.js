@@ -3,14 +3,9 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import TransitionWrapper from "./animation/TransitionWrapper"
 
-// Sample component
-class Sample extends Component {
-  render() {
-    return
-  }
+export default function Sample(props) {
+  return <></>
 }
-Sample.propTypes = {
+Sample.defaultProps = {
   optionalWidth: PropTypes.number,
 }
-
-export default Sample

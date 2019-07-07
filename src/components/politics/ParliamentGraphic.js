@@ -1,6 +1,10 @@
-import React, { Component } from "react"
+import React, { Component, PureComponent } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import Firestore from "../data/Firestore"
+import TransitionWrapper from "../animation/TransitionWrapper"
+import MemberPage from "./MemberPage"
+import Colors from "../Colors"
 
 class Button extends Component {
   render() {

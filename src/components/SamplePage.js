@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import WebPage from '../components/Page';
-import { Heading } from '../components/Typography';
+import React, { Component } from "react"
+import WebPage from "../components/Page"
+import { Heading } from "./typography"
 import { Col, Row, LayoutWrapper } from "../components/Layout"
 
 // Main Page component

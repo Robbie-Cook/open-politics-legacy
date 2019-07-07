@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Heading } from '../components/Typography'
+import { Heading } from '../components/typography'
 import {Col, Row, Container as LayoutWrapper} from '../components/Wrappers' 
 import WebPage from '../components/Page'
 

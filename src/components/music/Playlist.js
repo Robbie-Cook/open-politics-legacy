@@ -4,7 +4,7 @@ import { BorderBox } from "../Boxes";
 import Song from "../music/Song";
 /* Imports */
 /* Stylesheets etc. */
-import { Heading } from "../Typography";
+import { Heading } from "../typography";
 import { MobileView } from "../Views";
 
 class Playlist extends Component {

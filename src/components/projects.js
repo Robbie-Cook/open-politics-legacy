@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Button, ButtonWrapper } from "../components/Button";
 /* Theme */
-import Colors from "../data/Colors";
+import Colors from "./Colors";
 import { MobileView } from "./Views";
 
 /*

@@ -2,7 +2,7 @@
 
 import React from "react"
 import { Helmet } from "react-helmet"
-import Colors from "../data/Colors"
+import Colors from "./Colors"
 
 class MyHelmet extends React.Component {
   render() {

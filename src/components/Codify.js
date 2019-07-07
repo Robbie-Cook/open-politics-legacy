@@ -6,7 +6,7 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import Spacer from "./Spacer"
 import styled from "styled-components"
-import Colors from "../data/Colors"
+import Colors from "./Colors"
 
 /** Icons to display with text */
 class TextIcon extends Component {

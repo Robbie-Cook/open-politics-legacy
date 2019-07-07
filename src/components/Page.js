@@ -4,7 +4,7 @@
 /* Stylesheets etc. */
 import React, { Component } from "react"
 import styled from "styled-components"
-import Colors from "../data/Colors"
+import Colors from "./Colors"
 import NavigationBar from "./NavigationBar"
 import MyLink from "./MyLink"
 import MyHelmet from "./MyHelmet"

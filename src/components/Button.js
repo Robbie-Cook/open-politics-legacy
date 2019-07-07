@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { Button as GrommetButton, Grommet } from "grommet"
-import Colors from "../data/Colors"
+import Colors from "./Colors"
 import styled from "styled-components"
 import Dimensions from "../components/Dimensions"
 

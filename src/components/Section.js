@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import Colors from "../data/Colors"
-import Sizes from "../data/Sizes"
+import Colors from "./Colors"
+import Sizes from "./Sizes.js"
 
 /**
  * A component designed to take up exactly the window size (minus the

@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel as ReactCarousel } from "react-responsive-carousel"
 import styled from "styled-components"
 import { MobileView } from "./Views"
-import Colors from "../data/Colors"
+import Colors from "./Colors"
 
 /*
  * An image carousel

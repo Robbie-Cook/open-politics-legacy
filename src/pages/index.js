@@ -1,9 +1,10 @@
-import React, { Component } from "react"
-import { Heading } from "../components/Typography"
+import React, { useState } from "react"
+import { Heading } from "../components/typography"
 import { Col, Row, LayoutWrapper } from "../components/Layout"
 import WebPage from "../components/Page"
-import { BorderBox } from '../components/Boxes';
+import { BorderBox } from "../components/Boxes"
 import ParliamentGraphic from "../components/politics/ParliamentGraphic"
+import MemberPage from "../components/politics/MemberPage"
 
 // Main Page component
 class Index extends Component {

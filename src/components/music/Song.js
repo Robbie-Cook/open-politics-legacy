@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import styled from "styled-components";
-import Colors from "../../data/Colors";
+import Colors from ".././Colors";
 
 /**
  * Represents a track UI on the page

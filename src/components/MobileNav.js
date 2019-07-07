@@ -9,10 +9,10 @@ import Grow from "@material-ui/core/Grow"
 import Paper from "@material-ui/core/Paper"
 import Popper from "@material-ui/core/Popper"
 import { withStyles } from "@material-ui/core/styles"
-import Colors from "../data/Colors"
+import Colors from "./Colors"
 import styled from "styled-components"
 import { Sizes as ViewSizes } from "./Views"
-import Sizes from "../data/Sizes"
+import Sizes from "./Sizes.js"
 import MyAnilink from "./MyAnilink"
 
 /**

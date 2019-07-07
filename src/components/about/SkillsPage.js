@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import styled from "styled-components";
-import Colors from "../../data/Colors";
+import Colors from ".././Colors";
 import { ButtonWrapper } from "../Button";
 import Spacer from "../Spacer";
-import { Heading } from "../Typography";
+import { Heading } from "../typography";
 import { MobileView } from "../Views";
 
 /** A component which defines the SkillBoxes */

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component, PureComponent } from "react";
 import styled from "styled-components";
-import Colors from "../../data/Colors";
+import Colors from ".././Colors";
 
 /**
  * Used by Song to represent a spotify song

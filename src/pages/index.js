@@ -1,10 +1,10 @@
-import React, { useState } from "react"
-import { Heading } from "../components/typography"
-import { Col, Row, LayoutWrapper } from "../components/Layout"
-import WebPage from "../components/Page"
-import { BorderBox } from "../components/Boxes"
-import ParliamentGraphic from "../components/politics/ParliamentGraphic"
-import MemberPage from "../components/politics/MemberPage"
+import React from "react";
+import { BorderBox } from "../components/Boxes";
+import { Col, LayoutWrapper, Row } from "../components/Layout";
+import WebPage from "../components/Page";
+import MemberPage from "../components/politics/MemberPage";
+import ParliamentGraphic from "../components/politics/ParliamentGraphic";
+import { Heading } from "../components/typography";
 
 // Main Page component
 

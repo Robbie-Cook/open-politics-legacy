@@ -1,7 +1,6 @@
 import React, { Component, PureComponent } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Firestore from "../data/Firestore"
 import TransitionWrapper from "../animation/TransitionWrapper"
 import MemberPage from "./MemberPage"
 import Colors from "../Colors"
@@ -42,8 +41,7 @@ class ParliamentGraphic extends Component {
       membersData: null,
       partyData: null,
     }
-    var db = Firestore.getDb()
-
+    
     // Updating functions bound to this
     var updateSeatingData = function(data) {
       this.setState({ seatingData: data })
@@ -58,23 +56,7 @@ class ParliamentGraphic extends Component {
     }.bind(this)
 
     // Queries for the data
-    db.collection("seats")
-      .get()
-      .then(querySnapshot => {
-        updateSeatingData(querySnapshot)
-      })
-
-    db.collection("members")
-      .get()
-      .then(querySnapshot => {
-        updateMembersData(querySnapshot)
-      })
-
-    db.collection("parties")
-      .get()
-      .then(querySnapshot => {
-        updatePartyData(querySnapshot)
-      })
+    // TODO: implement queries to API e.g. api.robbie.pw/politics/members
   }
 
   generateSeats(seatingData) {

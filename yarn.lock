@@ -1524,10 +1524,10 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@robbie-cook/react-components@^3.0.13":
-  version "3.0.13"
-  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-3.0.13.tgz#f63d5905ce1b87cc03c4cf5c5f159de6791458fe"
-  integrity sha512-CRuTK6vkDxuDVDCabSZW8mK1BgQvB04Xz4G5P9KZdSCsOa/q0LDzf7wHtkp8nNkxbpdun3kSGYS3zdy9j7fU6g==
+"@robbie-cook/react-components@^3.0.14":
+  version "3.0.14"
+  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-3.0.14.tgz#21dca54e7b64f75c8ea59c02d8421d21311e27b1"
+  integrity sha512-ic0XygyFUMVGc+9kEhGacq7NVa/GwkWDD5/Vs4K562/iLOE2mw8vFlI4uKh8gscyiw/Z+EScufEWlcwtjpQo6Q==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.21"
     "@fortawesome/free-solid-svg-icons" "^5.10.1"

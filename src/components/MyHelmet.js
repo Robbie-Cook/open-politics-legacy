@@ -1,6 +1,6 @@
 // Metadata for each page
 
-import React from "react"
+import React, { useContext } from "react"
 import { Helmet } from "react-helmet"
 import Colors from "./Colors"
 

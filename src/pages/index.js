@@ -5,13 +5,15 @@ import WebPage from "../components/Page";
 import MemberPage from "../components/politics/MemberPage";
 import ParliamentGraphic from "../components/politics/ParliamentGraphic";
 import { Heading } from "../components/typography";
+import { ProgressBar, ProgressBarSectionData } from "../components/ui-components/ProgressBar"
+import { Page } from "@robbie-cook/react-components"
 
 // Main Page component
 
 export default function Index(props) {
   // Render
   return (
-    <WebPage>
+    <Page>
       <LayoutWrapper>
         <Heading type="h1" center>
           Parliament
@@ -28,7 +30,10 @@ export default function Index(props) {
             </BorderBox>
           </Col>
         </Row>
+      
+        <Heading type="h2">Balance of power</Heading>
+        <ProgressBar />
       </LayoutWrapper>
-    </WebPage>
+    </Page>
   )
 }

@@ -4,7 +4,7 @@ import { DefaultTheme } from "@robbie-cook/react-components"
 
 class MyTheme {
   static textColor = "#dcd6ce";
-  static backgroundColor = "white";
+  static backgroundColor = "#F58C8C";
 
   // Link color
   static link = {
@@ -18,7 +18,7 @@ class MyTheme {
   };
 
   static page = {
-    backgroundColor: "white",
+    backgroundColor: this.backgroundColor,
     secondaryColor: "#EB6D6D" // reddish
   };
 

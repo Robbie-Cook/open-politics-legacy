@@ -5,7 +5,6 @@ import React, { PureComponent } from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons"
-import { isThisTypeNode } from "typescript"
 
 /**
  * A loading screen

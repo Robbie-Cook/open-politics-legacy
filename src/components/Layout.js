@@ -23,27 +23,27 @@ const Row = styled.div`
     flex-direction: column;
   `)}
 `
+/**
+ * Represents a column
+ * @param {*} props 
+ */
+function Col(props) {
+  const StyledCol = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px 20px 0;
+    width: ${props.width};
 
-class Col extends Component {
-  propTypes = {
-    width: PropTypes.string, // Given as a string,
-    // not as a number, e.g. 50%
-  }
-
-  render() {
-    Col = styled.div`
-      display: flex;
-      flex-direction: column;
-      margin: 0 40px 20px 0;
-      width: ${this.props.width};
-
-      ${new MobileView(`
+    ${new MobileView(`
         width: 100%;
       `)}
-    `
+  `
 
-    return <Col>{this.props.children}</Col>
-  }
+  return <StyledCol>{props.children}</StyledCol>
+}
+Col.propTypes = {
+  width: PropTypes.string, // Given as a string,
+  // not as a number, e.g. 50%
 }
 
 export { Col, Row, LayoutWrapper }

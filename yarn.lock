@@ -1524,10 +1524,10 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@robbie-cook/react-components@^3.0.21":
-  version "3.0.21"
-  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-3.0.21.tgz#a236369e3dd74016ab248330600215c4ddbfb805"
-  integrity sha512-Yx6VRtaKoobKlSxXXUxno9bpbYcdItZxFg0+H2WpwQExZVzBf7F3iDDbru8XUHZcSoUb9z6bD00vH6u/0E7XtA==
+"@robbie-cook/react-components@^3.0.23":
+  version "3.0.23"
+  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-3.0.23.tgz#e8436803f6e6b1ae383e1a3a13131c7e0d7446a5"
+  integrity sha512-WWy7VRNwCFDqaLLKZUJ+4z+6QCo/sqBC4tpJJwlP/FMoPEn7GFj07CXh2S9KabmRYF+FMADUrduHRBEDABnA/A==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.21"
     "@fortawesome/free-solid-svg-icons" "^5.10.1"
@@ -10543,7 +10543,7 @@ react-transition-group@^4.0.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@^16.8.4, react@^16.8.6, react@^16.9.0:
+react@^16.8.4, react@^16.9.0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
   integrity sha512-+7LQnFBwkiw+BobzOF6N//BdoNw0ouwmSJTEm9cglOOmsg/TMiFHZLe2sEoN5M7LgJTj9oHH0gxklfnQe66S1w==

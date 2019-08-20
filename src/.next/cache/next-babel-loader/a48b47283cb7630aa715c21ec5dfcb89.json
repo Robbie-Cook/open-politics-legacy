@@ -1,1 +1,0 @@
-{"ast":null,"code":"/* Defines a page link */\nimport React from \"react\";\n\nclass MyLink {\n  constructor(name, path, component, exact = false) {\n    this.name = name;\n    this.path = path;\n    this.exact = exact; // whether or not the path has to be exact\n  }\n\n}\n\nexport default MyLink;","map":null,"metadata":{},"sourceType":"module"}

@@ -43,9 +43,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "next ./src",
-    "build": "next build ./src && next export ./src",
-    "start": "next start ./src",
+    "dev": "next",
+    "build": "next build && next export",
+    "start": "next start",
     "format": "prettier --write src/**/*.{js,jsx}",
     "serve": "next serve ./src",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""

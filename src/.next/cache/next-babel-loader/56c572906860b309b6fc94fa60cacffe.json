@@ -1,0 +1,1 @@
+{"ast":null,"code":"// My own UI Wrappers for page components\nimport styled from 'styled-components';\nexport const Container = styled.div`\ndisplay: flex;\nflex-direction: column;\nwidth: 100%`;","map":null,"metadata":{},"sourceType":"module"}

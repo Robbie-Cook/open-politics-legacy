@@ -1,7 +1,7 @@
 import React, { Component, PureComponent } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import TransitionWrapper from "../animation/TransitionWrapper"
+import { Transition } from "@robbie-cook/react-components"
 import MemberPage from "./MemberPage"
 import Colors from "../Colors"
 
@@ -83,11 +83,11 @@ class ParliamentGraphic extends Component {
 
   render() {
     return (
-      <TransitionWrapper loaded={this.state.seatingData ? true : false}>
+      <Transition loaded={this.state.seatingData}>
         <this.StyledSeatWrapper>
           {this.generateSeats(this.state.seatingData, this.positions)}
         </this.StyledSeatWrapper>
-      </TransitionWrapper>
+      </Transition>
     )
   }
 }

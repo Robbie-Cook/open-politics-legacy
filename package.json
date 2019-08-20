@@ -16,14 +16,6 @@
     "@zeit/next-css": "^1.0.1",
     "babel-plugin-styled-components": "^1.10.6",
     "firebase": "^6.2.4",
-    "gatsby-image": "^2.2.3",
-    "gatsby-plugin-manifest": "^2.2.0",
-    "gatsby-plugin-offline": "^2.2.0",
-    "gatsby-plugin-react-helmet": "^3.1.3",
-    "gatsby-plugin-sharp": "^2.2.1",
-    "gatsby-plugin-styled-components": "^3.1.2",
-    "gatsby-source-filesystem": "^2.1.0",
-    "gatsby-transformer-sharp": "^2.2.0",
     "gsap": "^2.1.3",
     "next": "^9.0.4",
     "prop-types": "^15.7.2",
@@ -33,28 +25,22 @@
     "react-pose": "^4.0.8",
     "react-responsive-carousel": "^3.1.50",
     "styled-components": "^4.3.2",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "webpack": "^4.39.2"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby"
+    ""
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "next ./src",
-    "build": "next build ./src",
-    "start": "next start ./src",
+    "dev": "next",
+    "build": "next build && next export",
+    "start": "next start",
     "format": "prettier --write src/**/*.{js,jsx}",
     "serve": "next serve ./src",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

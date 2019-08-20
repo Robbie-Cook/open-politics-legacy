@@ -5,15 +5,15 @@ import MyTheme from "../components/context/MyTheme"
 import MySiteContext from "../components/context/MySiteContext"
 
 class MyApp extends App {
-  static async getInitialProps({ Component, ctx }) {
-    let pageProps = {}
+  // static async getInitialProps({ Component, ctx }) {
+  //   let pageProps = {}
 
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
-    }
+  //   if (Component.getInitialProps) {
+  //     pageProps = await Component.getInitialProps(ctx)
+  //   }
 
-    return { pageProps }
-  }
+  //   return { pageProps }
+  // }
 
   render() {
     const { Component, pageProps } = this.props

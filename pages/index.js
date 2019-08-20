@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext, useState, useEffect }  from "react"
 import { BorderBox } from "../components/Boxes"
 import { Col, LayoutWrapper, Row } from "../components/Layout"
 import WebPage from "../components/Page"
@@ -14,6 +14,7 @@ import { Page } from "@robbie-cook/react-components"
 // Main Page component
 
 export default function Index(props) {
+
   // Render
   return (
     <Page>

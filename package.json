@@ -36,9 +36,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "develop": "yarn link @robbie-cook/react-components && yarn link react && next",
     "build": "next build && next export",
-    "start": "next start",
+    "start": "yarn develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "serve": "next serve ./src",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""

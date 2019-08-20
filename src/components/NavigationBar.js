@@ -6,8 +6,6 @@ import React from "react"
 import styled from "styled-components"
 import Colors from "./Colors"
 import Sizes from "./Sizes.js"
-import MobileNav from "./MobileNav"
-import MyAnilink from "./MyAnilink"
 import { MobileView, Sizes as ViewSizes } from "./Views"
 import MyLink from "./MyLink"
 import { Heading, Link } from "./typography"
@@ -61,7 +59,6 @@ class NavigationBar extends React.Component {
               <Spacer width="56px"></Spacer>
             </>
           )}
-          <MobileNav pages={navigationLinks} />
           <StyledTabs>
             {(() => {
               let array = []
@@ -73,7 +70,6 @@ class NavigationBar extends React.Component {
                 // If the current URL is the same as the item path, mark Tab as active
                 array.push(
                   <LinkContainer>
-                    <MyAnilink path={item.path}>
                       <Link
                         style={`
                           line-height: ${Sizes.navbar.height};
@@ -84,7 +80,6 @@ class NavigationBar extends React.Component {
                       >
                         {item.name}
                       </Link>
-                    </MyAnilink>
                   </LinkContainer>
                 )
               })

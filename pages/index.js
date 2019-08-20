@@ -10,12 +10,18 @@ import {
   ProgressBarSectionData,
 } from "../components/ui-components/ProgressBar"
 import { Page } from "@robbie-cook/react-components"
+import React, { useContext, useState, useEffect } from "react"
 
 // Main Page component
 
 export default function Index(props) {
+
+  const [loaded, setLoaded] = usestate(false)
+  useEffect(() => {setLoaded(true)}, [])
+
   // Render
   return (
+    loaded &&
     <Page>
       <LayoutWrapper>
         <Heading type="h1" center>

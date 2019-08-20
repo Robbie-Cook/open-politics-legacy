@@ -1197,10 +1197,10 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@robbie-cook/react-components@^2.0.28":
-  version "2.0.28"
-  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-2.0.28.tgz#c9bca0305b5a42676da21f5bedc7e0b0c51cde81"
-  integrity sha512-dBpXWw6qB44xhVI1CPX70z/3An45oRd1gKb4WDtNFhqjeMiNLxSyHfwLRhDMeiC+aRu7apKqbrsJyCI7YaJOdg==
+"@robbie-cook/react-components@^2.0.29":
+  version "2.0.29"
+  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-2.0.29.tgz#bf58aae3c5b33ad3a12683f59ec4b79c2245c757"
+  integrity sha512-iDiW1ERqKoaO+GcCDqt9EmwBvVmYgtWLRgvEKPZ6DXYJavTq0peqQMBKZAMfO914nlkhkwqvPuxchpKVx+sLow==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.21"
     "@fortawesome/free-solid-svg-icons" "^5.10.1"

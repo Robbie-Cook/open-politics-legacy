@@ -25,7 +25,8 @@
     "react-pose": "^4.0.8",
     "react-responsive-carousel": "^3.1.50",
     "styled-components": "^4.3.2",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "webpack": "^4.39.2"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

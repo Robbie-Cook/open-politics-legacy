@@ -15,12 +15,8 @@ import { Page } from "@robbie-cook/react-components"
 
 export default function Index(props) {
 
-  const [loaded, setLoaded] = useState(false)
-  useEffect(() => {setLoaded(true)}, [])
-
   // Render
   return (
-    loaded &&
     <Page>
       <LayoutWrapper>
         <Heading type="h1" center>

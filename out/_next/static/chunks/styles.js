@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
-/***/ "../node_modules/react-responsive-carousel/lib/styles/carousel.min.css":
-/*!*****************************************************************************!*\
-  !*** ../node_modules/react-responsive-carousel/lib/styles/carousel.min.css ***!
-  \*****************************************************************************/
+/***/ "./node_modules/react-responsive-carousel/lib/styles/carousel.min.css":
+/*!****************************************************************************!*\
+  !*** ./node_modules/react-responsive-carousel/lib/styles/carousel.min.css ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29,7 +29,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1566279137124");
+            injectCss(link, link.href.split("?")[0] + "?unix=1566281056806");
           });
       }
     }

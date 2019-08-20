@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext, useState, useEffect }  from "react"
 import { BorderBox } from "../components/Boxes"
 import { Col, LayoutWrapper, Row } from "../components/Layout"
 import WebPage from "../components/Page"
@@ -10,13 +10,12 @@ import {
   ProgressBarSectionData,
 } from "../components/ui-components/ProgressBar"
 import { Page } from "@robbie-cook/react-components"
-import React, { useContext, useState, useEffect } from "react"
 
 // Main Page component
 
 export default function Index(props) {
 
-  const [loaded, setLoaded] = usestate(false)
+  const [loaded, setLoaded] = useState(false)
   useEffect(() => {setLoaded(true)}, [])
 
   // Render

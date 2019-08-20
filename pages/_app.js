@@ -1,30 +1,33 @@
-import React from 'react';
-import App, { Container } from 'next/app';
-import { ThemeContext, DefaultTheme } from "@robbie-cook/react-components"
-import MyTheme from "../components/theme/MyTheme"
+import React from "react"
+import App, { Container } from "next/app"
+import { ThemeContext, SiteContext } from "@robbie-cook/react-components"
+import MyTheme from "../components/context/MyTheme"
+import MySiteContext from "../components/context/MySiteContext"
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
-    let pageProps = {};
+    let pageProps = {}
 
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
+      pageProps = await Component.getInitialProps(ctx)
     }
 
-    return { pageProps };
+    return { pageProps }
   }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps } = this.props
 
     return (
       <Container>
-        <ThemeContext.Provider value={MyTheme}>
-          <Component {...pageProps} />
-        </ThemeContext.Provider>
+        <SiteContext.Provider value={MySiteContext}>
+          <ThemeContext.Provider value={MyTheme}>
+            <Component {...pageProps} />
+          </ThemeContext.Provider>
+        </SiteContext.Provider>
       </Container>
-    );
+    )
   }
 }
 
-export default MyApp;
+export default MyApp

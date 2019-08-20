@@ -37,15 +37,23 @@
       "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\_app.js": 8,
       "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\_error.js": 9,
       "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\index.js": 10,
-      "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\news.js": 11
+      "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\news.js": 11,
+      "static\\Q-raauGLeaKW0CAWWwruk\\pages\\_app.js": 3,
+      "static\\Q-raauGLeaKW0CAWWwruk\\pages\\_error.js": 4,
+      "static\\Q-raauGLeaKW0CAWWwruk\\pages\\index.js": 5,
+      "static\\Q-raauGLeaKW0CAWWwruk\\pages\\news.js": 6,
+      "static\\-jPO2q9uhOZjxEZB5ZuPc\\pages\\_app.js": 7,
+      "static\\-jPO2q9uhOZjxEZB5ZuPc\\pages\\_error.js": 8,
+      "static\\-jPO2q9uhOZjxEZB5ZuPc\\pages\\index.js": 9,
+      "static\\-jPO2q9uhOZjxEZB5ZuPc\\pages\\news.js": 10
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
       10,
-      11,
       2,
+      7,
       8,
       9
     ]

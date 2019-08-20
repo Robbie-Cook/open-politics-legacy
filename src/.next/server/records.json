@@ -5,7 +5,8 @@
       "multi private-next-pages/news.js": 1,
       "multi next/dist/pages/_app": 2,
       "multi next/dist/pages/_error": 3,
-      "multi next/dist/pages/_document": 4
+      "multi next/dist/pages/_document": 4,
+      "multi private-next-pages/_app.js": 2
     },
     "usedIds": {
       "0": 0,
@@ -21,15 +22,20 @@
       "static\\NT9REi8qAUAPCnsIprqrs\\pages\\_document.js": 1,
       "static\\NT9REi8qAUAPCnsIprqrs\\pages\\_error.js": 2,
       "static\\NT9REi8qAUAPCnsIprqrs\\pages\\index.js": 3,
-      "static\\NT9REi8qAUAPCnsIprqrs\\pages\\news.js": 4
+      "static\\NT9REi8qAUAPCnsIprqrs\\pages\\news.js": 4,
+      "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\_app.js": 5,
+      "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\_document.js": 6,
+      "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\_error.js": 7,
+      "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\index.js": 8,
+      "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\news.js": 9
     },
     "bySource": {},
     "usedIds": [
-      0,
-      1,
-      2,
-      3,
-      4
+      5,
+      6,
+      7,
+      8,
+      9
     ]
   }
 }

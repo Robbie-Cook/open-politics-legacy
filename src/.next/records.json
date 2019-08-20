@@ -33,18 +33,21 @@
       "static\\NT9REi8qAUAPCnsIprqrs\\pages\\_error.js": 4,
       "static\\NT9REi8qAUAPCnsIprqrs\\pages\\index.js": 5,
       "static\\NT9REi8qAUAPCnsIprqrs\\pages\\news.js": 6,
-      "styles": 7
+      "styles": 7,
+      "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\_app.js": 8,
+      "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\_error.js": 9,
+      "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\index.js": 10,
+      "static\\9khI8g4p-ZmFus4oYMX6K\\pages\\news.js": 11
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
+      10,
+      11,
       2,
-      3,
-      4,
-      5,
-      6,
-      7
+      8,
+      9
     ]
   }
 }

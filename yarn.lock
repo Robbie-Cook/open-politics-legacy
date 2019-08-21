@@ -1198,9 +1198,9 @@
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
 "@robbie-cook/react-components@^2.0.29":
-  version "2.0.29"
-  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-2.0.29.tgz#bf58aae3c5b33ad3a12683f59ec4b79c2245c757"
-  integrity sha512-iDiW1ERqKoaO+GcCDqt9EmwBvVmYgtWLRgvEKPZ6DXYJavTq0peqQMBKZAMfO914nlkhkwqvPuxchpKVx+sLow==
+  version "2.0.30"
+  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-2.0.30.tgz#7ff88a0b7084d8ab9857e765164dbd47d3acaff2"
+  integrity sha512-NnFsEkImtj4bwbyGcNVqNmwwjShzkl+XLlxsensbGvC5FibOokzkXPWjzM/9HhOQnzuQi0koDn0NR60ZWRcTRA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.21"
     "@fortawesome/free-solid-svg-icons" "^5.10.1"
@@ -5221,6 +5221,11 @@ send@0.17.1:
     on-finished "~2.3.0"
     range-parser "~1.2.1"
     statuses "~1.5.0"
+
+serialize-javascript@1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-1.7.0.tgz#d6e0dfb2a3832a8c94468e6eb1db97e55a192a65"
+  integrity sha512-ke8UG8ulpFOxO8f8gRYabHQe/ZntKlcig2Mp+8+URDP1D8vJZ0KUt7LYo07q25Z/+JVSgpr/cui9PIp5H6/+nA==
 
 serialize-javascript@^1.7.0:
   version "1.8.0"

@@ -1549,10 +1549,10 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@robbie-cook/react-components@^2.0.32":
-  version "2.0.32"
-  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-2.0.32.tgz#0a255e57b77b8a279ecc60853cfb274d0d610247"
-  integrity sha512-0/RIKWvqyz4mPxs5G8YTwX2DosB05iFco6PQCS6z8MSC5XLG0i/liibZ/15NIK7ImhwToeUXVG+XTsmz4XNPnQ==
+"@robbie-cook/react-components@^2.0.34":
+  version "2.0.34"
+  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-2.0.34.tgz#0d174f424de84b36c69f141ca78e4deb71297fcd"
+  integrity sha512-AeW9Ez5mAbLHPuVOS1LZyX2lPOwVHtJYeOn+oigtrd/d9p0H3HV+xnMp3yK6YTlLdz4F0I2xEtEnB5gmnsaQbA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.21"
     "@fortawesome/free-solid-svg-icons" "^5.10.1"
@@ -1560,6 +1560,7 @@
     "@material-ui/core" "^4.3.2"
     "@material-ui/icons" "^4.2.1"
     "@zeit/next-css" "^1.0.1"
+    browser-monads "^1.0.0"
     create-react-app "^3.1.1"
     grommet "^2.7.6"
     gsap "^2.1.3"
@@ -2721,6 +2722,13 @@ brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
   integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
+
+browser-monads@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/browser-monads/-/browser-monads-1.0.0.tgz#c9a210ef3793cae7016440d9a9adfedd9a5ad7bd"
+  integrity sha1-yaIQ7zeTyucBZEDZqa3+3Zpa170=
+  dependencies:
+    nothing-mock "^1.0.0"
 
 browser-process-hrtime@^0.1.2:
   version "0.1.3"
@@ -7795,6 +7803,11 @@ normalize-url@^3.0.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
+
+nothing-mock@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/nothing-mock/-/nothing-mock-1.0.2.tgz#e269ce26919e9b13c7ad0178348ab2b060186879"
+  integrity sha512-7/Ss8rzSY78UX0cbPB8Qj7X6IHV+QO7T0Rq2nYbpd7HymBCE0HIWSjoTjqbSVV8JSuuD50oVObwZDfvnwOT/NQ==
 
 npm-bundled@^1.0.1:
   version "1.0.6"

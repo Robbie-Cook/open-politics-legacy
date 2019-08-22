@@ -26,6 +26,7 @@
     "react-helmet": "^5.2.1",
     "react-pose": "^4.0.8",
     "react-responsive-carousel": "^3.1.50",
+    "serve": "^11.1.0",
     "styled-components": "^4.3.2",
     "typescript": "^3.5.2",
     "webpack": "^4.39.2"
@@ -42,7 +43,6 @@
     "build": "next build && next export",
     "start": "yarn develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "serve": "next serve ./src",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "serve": "serve ./out"
   }
 }

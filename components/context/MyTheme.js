@@ -1,9 +1,10 @@
 import { DefaultTheme } from "@robbie-cook/react-components"
 
-/** Taking the default theme from react-components and modifying it */
-
+/** 
+ * Taking the default theme from react-components and modifying it 
+ */
 class MyTheme {
-  static textColor = "#dcd6ce";
+  static textColor = "#ffffff";
   static backgroundColor = "#F58C8C";
 
   // Link color
@@ -41,6 +42,5 @@ class MyTheme {
     borderColor: this.textColor
   }
 }
-
 
 export default MyTheme

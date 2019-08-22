@@ -39,7 +39,11 @@ class MyTheme {
   static button = {
     backgroundColor: this.link.color,
     color: this.text.color,
-    borderColor: this.textColor
+    borderColor: this.link.color,
+    hover: {
+      backgroundColor: this.backgroundColor,
+      color: this.link.color
+    }
   }
 }
 

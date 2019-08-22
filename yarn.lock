@@ -2505,6 +2505,11 @@ babel-plugin-named-asset-import@^0.3.3:
   resolved "https://registry.yarnpkg.com/babel-plugin-named-asset-import/-/babel-plugin-named-asset-import-0.3.3.tgz#9ba2f3ac4dc78b042651654f07e847adfe50667c"
   integrity sha512-1XDRysF4894BUdMChT+2HHbtJYiO7zx5Be7U6bT8dISy7OdyETMGIAQBMPQCsY1YRf0xcubwnKKaDr5bk15JTA==
 
+babel-plugin-react-require@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-react-require/-/babel-plugin-react-require-3.1.1.tgz#5c3d2564fa16b1e45212ed52519db147b1596106"
+  integrity sha512-XFz+B0dWx41fnGnugzCWn5rOgrDHb150N5gFhUfO3BgYDCT25o4sofRtd9uUfqUHoRu+t4/r5Cr2RMPIKuCt2g==
+
 "babel-plugin-styled-components@>= 1", babel-plugin-styled-components@^1.10.6:
   version "1.10.6"
   resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.10.6.tgz#f8782953751115faf09a9f92431436912c34006b"

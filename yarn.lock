@@ -1549,10 +1549,10 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@robbie-cook/react-components@^3.0.44":
-  version "3.0.44"
-  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-3.0.44.tgz#25514ae0df14a8b20adf1e4aafeed822449ef216"
-  integrity sha512-dqoiACg5jJn1Qvaz8NkwTUlVD02rBUaebCypTlIMS0l6pivhFwYLoUemmmasxXdlSbcMxODUsXMWWSDQIqbYMA==
+"@robbie-cook/react-components@^3.0.45":
+  version "3.0.45"
+  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-3.0.45.tgz#d8ed156d165716c81fe96bcc90a5969a21c82a6c"
+  integrity sha512-Rq6MGZYW9N//C9B04IA5ZvZALn+eb58a0UtJXmW2x76YJR4OipNt5I2kv8TwA89Pvm8u1hAS+7wkJGmIdn0feQ==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.21"
     "@fortawesome/free-solid-svg-icons" "^5.10.1"

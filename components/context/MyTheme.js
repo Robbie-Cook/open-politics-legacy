@@ -13,7 +13,7 @@ const Title = styled.p`
   text-transform: lowercase;
 `
 
-class MyTheme {
+class MyTheme extends DefaultTheme {
   static textColor = "#ffffff";
   static backgroundColor = "#F58C8C";
 
@@ -31,15 +31,20 @@ class MyTheme {
 
   static page = {
     backgroundColor: this.backgroundColor,
-    secondaryColor: "#EB6D6D" // reddish
+    secondaryColor: "#EB6D6D", // reddish
+    padding: "20px 90px",
+    mobilePadding: "20px 30px"
   };
 
   static navbar = {
     backgroundColor: this.backgroundColor,
     height: "60px",
     title: <Title>Open Politics</Title>,
+    color: this.text.color,
+    padding: "0px 90px 0px 90px",
+    mobilePadding: "0 30px",
     // Navbar button styles
-    button: {
+    links: {
       backgroundColor: this.backgroundColor,
       color: this.textColor,
       borderColor: 'transparent',

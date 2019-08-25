@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect }  from "react"
 import { BorderBox } from "../components/Boxes"
 import { Col, LayoutWrapper, Row } from "../components/Layout"
-import WebPage from "../components/Page"
 import MemberPage from "../components/politics/MemberPage"
 import ParliamentGraphic from "../components/politics/ParliamentGraphic"
 import { Heading } from "../components/typography"

@@ -3,13 +3,6 @@ import { DefaultTheme } from "@robbie-cook/react-components"
 /** 
  * Taking the default theme from react-components and modifying it 
  */
-/**
- * Styling for entire website. All common variables are being migrated here from
- * css/global-styles.css. 
- *
- * This is to be replaced with React.Context, where this is an object passed 
- * through a color context
-*/
 import React from "react"
 import styled from "styled-components"
 

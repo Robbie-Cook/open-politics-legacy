@@ -34,8 +34,8 @@ export default function Index(props) {
           </Col>
         </Row>
 
-        <Heading type="h2">Balance of power</Heading>
-        <ProgressBar />
+        {/* <Heading type="h2">Balance of power</Heading>
+        <ProgressBar /> */}
       </LayoutWrapper>
     </Page>
   )

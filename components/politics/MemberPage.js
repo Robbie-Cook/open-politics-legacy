@@ -1,7 +1,7 @@
-import React, { Component } from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes, { object } from "prop-types"
 import styled from "styled-components"
-import TransitionWrapper from "../animation/TransitionWrapper"
+import { Transition } from "@robbie-cook/react-components"
 import { BorderBox } from "../Boxes"
 import Colors from "../Colors"
 import { Heading, Text } from "../typography"
@@ -27,39 +27,45 @@ const MemberPageWrapper = styled.div`
 `
 
 // Sample component
-function MemberPage(props) {
+function MemberPage({memberId}) {
+  const [loading, setLoading] = useState(true)
+  const [member, setMember] = useState({id: "-1", name: "Member name", description: "my description"})
+
+  useEffect(() => {
+    fetchMember(memberId)
+  }, [])
+
+  const fetchMember = (id) => {
+    console.log(fetch(`api.robbie.pw/members/${id}`))
+    setLoading(false)
+  }
+
   return (
-    <MemberPageWrapper>
-      <BorderBox
-        style={`
+    <Transition show={true} spinner={true}>
+      <MemberPageWrapper>
+        <BorderBox
+          style={`
           border: 4px solid ${Colors.text.color}; 
           width: fit-content;
         `}
-      >
-        {props.memberImage ? (
-          <StyledMemberImage src={props.memberImage} />
-        ) : (
-          <StyledFontAwesomeIcon icon={faUserCircle} />
-        )}
-      </BorderBox>
-      <Heading type="h2" noMargin>
-        {props.memberName}
-      </Heading>
-      <Description>{props.memberDescription}</Description>
-    </MemberPageWrapper>
+        >
+          {member.image ? (
+            <StyledMemberImage src={member.image} />
+          ) : (
+            <StyledFontAwesomeIcon icon={faUserCircle} />
+          )}
+        </BorderBox>
+        <Heading type="h2" noMargin>
+          {member.name}
+        </Heading>
+        <Description>{member.description}</Description>
+      </MemberPageWrapper>
+    </Transition>
   )
 }
 MemberPage.propTypes = {
-  memberImage: PropTypes.object,
-  memberName: PropTypes.string,
-  memberDescription: PropTypes.string,
+  memberId: -1,
 }
-MemberPage.defaultProps = {
-  memberImage: null,
-  memberName: "Jim Bob",
-  memberDescription:
-    "Jim Bob is a valued MP from deep in the 'naki. \
-    His interests are farming, shooting, and dungeons and dragons.",
-}
+MemberPage.defaultProps = {}
 
 export default MemberPage

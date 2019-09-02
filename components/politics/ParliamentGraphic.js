@@ -1,95 +1,41 @@
-import React, { Component, PureComponent } from "react"
-import PropTypes from "prop-types"
-import styled from "styled-components"
 import { Transition } from "@robbie-cook/react-components"
-import MemberPage from "./MemberPage"
-import Colors from "../Colors"
-
-function Seat(props) {
-  const StyledSeat = styled.div`
-    width: ${props.size};
-    height: ${props.size};
-    background-color: ${props.color};
-    border-radius: 100%;
-    margin: 5px;
-    flex-shrink: 0;
-    position: absolute;
-    bottom: ${props.position[0]}px;
-    left: ${props.position[1]}px;
-  `
-  return <StyledSeat />
-}
-Seat.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.string,
-  id: PropTypes.number,
-  position: PropTypes.arrayOf(PropTypes.number)
-}
-Seat.defaultProps = {
-  color: Colors.text.color,
-  size: "14px",
-  id: 0,
-  position: [0, 0]
-}
+import React from "react"
+import { Circle, Layer, Stage } from "react-konva"
+import seatingData from "./data/seatingData"
 
 // ParliamentGraphic component
-class ParliamentGraphic extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      seatingData: null,
-      membersData: null,
-      partyData: null,
-    }
-    
-    // Updating functions bound to this
-    var updateSeatingData = function(data) {
-      this.setState({ seatingData: data })
-    }.bind(this)
+function ParliamentGraphic({ callback }) {
+  let width = 380
+  let height = 400
 
-    var updateMembersData = function(data) {
-      this.setState({ membersData: data })
-    }.bind(this)
-
-    var updatePartyData = function(data) {
-      this.setState({ partyData: data })
-    }.bind(this)
-
-    // Queries for the data
-    // TODO: implement queries to API e.g. api.robbie.pw/politics/members
+  let generateCircles = () => {
+    let jsx = []
+    seatingData.forEach(element => {
+      jsx.push(
+        <Circle
+          x={element.x}
+          y={element.y}
+          width={18}
+          height={18}
+          fill={"#FEFFFE"}
+          key={element.id}
+          onClick={() => callback(element.id)}
+        />
+      )
+    })
+    return jsx
   }
 
-  generateSeats(seatingData) {
-    if (!seatingData) {
-      return
-    }
-
-    let jsxArray = []
-    seatingData.docs.forEach(element =>
-      jsxArray.push(<Seat id={element.id} position={element.position} />)
-    )
-    return jsxArray
-  }
-
-  size = "300px"
-  StyledSeatWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-    width: ${this.size};
-    height: ${this.size};
-  `
-
-  render() {
-    return (
-      <Transition loaded={this.state.seatingData}>
-        <this.StyledSeatWrapper>
-          {this.generateSeats(this.state.seatingData, this.positions)}
-        </this.StyledSeatWrapper>
-      </Transition>
-    )
-  }
+  return (
+    <Stage width={width} height={height}>
+      <Layer>{generateCircles()}</Layer>
+    </Stage>
+  )
+}
+ParliamentGraphic.defaultProps = {
+  callback: () => {
+    console.log("Default clicked")
+  },
 }
 
 export default ParliamentGraphic

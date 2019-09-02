@@ -47,7 +47,7 @@ const navbar = {
     backgroundColor: backgroundColor,
     color: textColor,
     borderColor: "transparent",
-    activeColor: link.color,
+    activeColor: "#ffbebe",
     hoverColor: link.color,
   },
 }

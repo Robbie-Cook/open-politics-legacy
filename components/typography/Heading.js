@@ -1,9 +1,8 @@
-import styled from "styled-components"
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import Colors from "../Colors"
-import Spacer from "../Spacer"
-import Codify from "../Codify"
+import { Codify } from "@robbie-cook/react-components";
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+import Colors from "../Colors";
 
 /**
  *  Get appropriate heading

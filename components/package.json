@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/Robbie-Cook/React-Components/issues"
   },
-  "homepage": "https://github.com/Robbie-Cook/React-Components#readme"
+  "homepage": "https://github.com/Robbie-Cook/React-Components#readme",
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.5.5"
+  }
 }

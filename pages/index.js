@@ -1,19 +1,45 @@
-import React, { useContext, useState, useEffect } from "react"
+import { Page } from "@robbie-cook/react-components"
+import React, { useEffect, useState } from "react"
 import { BorderBox } from "../components/Boxes"
 import { Col, LayoutWrapper, Row } from "../components/Layout"
-import MemberPage from "../components/politics/MemberPage"
+import MemberPage from "../components/politics/member-page/MemberPage"
 import ParliamentGraphic from "../components/politics/ParliamentGraphic"
 import { Heading } from "../components/typography"
+import prismicConfig from "../components/politics/data/prismicConfiguration.json"
+import { Link, RichText, Date } from "prismic-reactjs"
 import {
-  ProgressBar,
-  ProgressBarSectionData,
-} from "../components/ui-components/ProgressBar"
-import { Page } from "@robbie-cook/react-components"
+  getMember,
+  getMemberData,
+} from "../components/politics/data/MemberData"
+
+/**
+ * Gets the member page from the given member id
+ * @param {string} memberId The member ID of the member to render
+ */
+function getMemberPage(members, memberId) {
+  const member = getMember(members, memberId)
+  return (
+    <MemberPage
+      name={member.name}
+      description={RichText.render(member.description)}
+      image={member.picture.url}
+    />
+  )
+}
 
 // Main Page component
+export default function Index() {
+  // Data about all members
+  const [members, setMembers] = useState(null)
 
-export default function Index(props) {
-  const [memberId, setMemberId] = useState(-1)
+  // Currently selected member
+  const [currentMemberId, setCurrentMemberId] = useState(0)
+
+  useEffect(() => {
+    getMemberData(prismicConfig.endpoint).then(data => {
+      setMembers(data)
+    })
+  }, [])
 
   // Render
   return (
@@ -25,12 +51,15 @@ export default function Index(props) {
         <Row>
           <Col width="50%">
             <BorderBox style="margin: auto;">
-              <ParliamentGraphic callback={setMemberId}></ParliamentGraphic>
+              <ParliamentGraphic
+                callback={setCurrentMemberId}
+                activeMember={currentMemberId}
+              ></ParliamentGraphic>
             </BorderBox>
           </Col>
           <Col width="50%">
             <BorderBox>
-              <MemberPage memberId={memberId} />
+              {members && getMemberPage(members, currentMemberId)}
             </BorderBox>
           </Col>
         </Row>

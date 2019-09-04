@@ -41,5 +41,8 @@ export const getMemberData = apiEndpoint => {
  * @param {string} memberId 
  */
 export const getMember = (members, memberId) => {
+  if (members[memberId] === null) {
+    return false
+  }
   return members[memberId].data
 }

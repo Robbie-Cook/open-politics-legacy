@@ -66,8 +66,11 @@ function ParliamentGraphic({ callback, activeMember }) {
           y={element.y}
           width={18}
           height={18}
-          fill={active ? "grey" : "#FEFFFE" }
+          fill={active ? "grey" : "#FEFFFE"}
           key={element.id}
+          onClick={() => {
+            callback(element.id)
+          }}
         />
       )
     })

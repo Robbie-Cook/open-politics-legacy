@@ -53,7 +53,7 @@ export default function Index() {
             <BorderBox style="margin: auto;">
               <ParliamentGraphic
                 callback={setCurrentMemberId}
-                activeMember={currentMemberId}
+                activeMember={1}
               ></ParliamentGraphic>
             </BorderBox>
           </Col>

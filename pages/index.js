@@ -11,19 +11,28 @@ import {
   getMember,
   getMemberData,
 } from "../components/politics/data/MemberData"
+import DefaultMemberPage from "../components/politics/member-page/DefaultMemberPage"
+import MemberPage404 from "../components/politics/member-page/MemberPage404"
+
+const DefaultMemberId = -1
 
 /**
  * Gets the member page from the given member id
  * @param {string} memberId The member ID of the member to render
  */
 function getMemberPage(members, memberId) {
+  if(memberId === DefaultMemberId) {
+    return <DefaultMemberPage />
+  }
   const member = getMember(members, memberId)
-  return (
+  return member ? (
     <MemberPage
       name={member.name}
       description={RichText.render(member.description)}
       image={member.picture.url}
     />
+  ) : (
+    <MemberPage404 />
   )
 }
 
@@ -33,7 +42,7 @@ export default function Index() {
   const [members, setMembers] = useState(null)
 
   // Currently selected member
-  const [currentMemberId, setCurrentMemberId] = useState(0)
+  const [currentMemberId, setCurrentMemberId] = useState(-1)
 
   useEffect(() => {
     getMemberData(prismicConfig.endpoint).then(data => {

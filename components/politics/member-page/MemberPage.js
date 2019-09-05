@@ -1,11 +1,11 @@
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import React from "react"
-import styled from "styled-components"
-import { BorderBox } from "../../Boxes"
-import Colors from "../../Colors"
-import { Heading, Text } from "../../typography"
-import MemberPageImage from "./MemberPageImage"
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import styled from "styled-components";
+import { BorderBox } from "../../Boxes";
+import Colors from "../../Colors";
+import { Heading, Text } from "../../typography";
+import MemberPageImage from "./MemberPageImage";
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   color: ${Colors.text.color};

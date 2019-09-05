@@ -3,13 +3,14 @@ import React from "react"
 import { Circle, Layer, Stage } from "react-konva"
 import seatingData from "./data/seatingData"
 import { motion } from "framer-motion"
+import { document } from "browser-monads"
 
 // ParliamentGraphic component
 function ParliamentGraphic({ callback, activeMember }) {
   let width = 380
   let height = 400
 
-  const enlargeCircle = async (circleRef, duration) => {
+  const enlargeCircle = async (circleRef, duration = 0.2) => {
     return new Promise(resolve => {
       circleRef.to({
         scaleX: 1.3,
@@ -25,8 +26,8 @@ function ParliamentGraphic({ callback, activeMember }) {
   const shrinkCircle = (circleRef, duration) => {
     return new Promise(resolve => {
       circleRef.to({
-        scaleX: 1.2,
-        scaleY: 1.2,
+        scaleX: 1,
+        scaleY: 1,
         duration,
         onFinish: () => {
           resolve(circleRef)
@@ -45,31 +46,34 @@ function ParliamentGraphic({ callback, activeMember }) {
     })
   }
 
-  const animateCircleCaller = async (circleRef, duration) => {
-    setInterval(async () => {
-      await animateCircle(circleRef, duration)
-    }, 600)
-  }
-
   let generateCircles = () => {
     let jsx = []
     seatingData.forEach(element => {
       let active = activeMember === element.id
+      let currentRef = null
       jsx.push(
         <Circle
           ref={node => {
             if (active && node != null) {
-              animateCircleCaller(node, 0.2)
+              enlargeCircle(node, 0.2)
             }
           }}
           x={element.x}
           y={element.y}
           width={18}
           height={18}
-          fill={active ? "grey" : "#FEFFFE"}
+          fill={"#FEFFFE"}
           key={element.id}
           onClick={() => {
             callback(element.id)
+          }}
+          onMouseEnter={(item) => {
+            document.body.style.cursor = "pointer"
+            // enlargeCircle(item.target)
+          }}
+          onMouseLeave={(item) => {
+            // shrinkCircle(item.target)
+            document.body.style.cursor = "default"
           }}
         />
       )

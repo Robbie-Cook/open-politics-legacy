@@ -41,7 +41,8 @@ export const getMemberData = apiEndpoint => {
  * @param {string} memberId 
  */
 export const getMember = (members, memberId) => {
-  if (members[memberId] === null) {
+  console.log(members[memberId])
+  if (members[memberId] === undefined) {
     return false
   }
   return members[memberId].data

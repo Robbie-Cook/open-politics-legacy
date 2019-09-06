@@ -3,10 +3,11 @@ import React, { useEffect, useState } from "react"
 import { BorderBox } from "../components/Boxes"
 import { Col, LayoutWrapper, Row } from "../components/Layout"
 import MemberPage from "../components/politics/member-page/MemberPage"
-import ParliamentGraphic from "../components/politics/ParliamentGraphic"
+import ParliamentGraphic from "../components/politics/graphics/ParliamentGraphic"
 import { Heading } from "../components/typography"
 import prismicConfig from "../components/politics/data/prismicConfiguration.json"
 import { Link, RichText, Date } from "prismic-reactjs"
+import { getPartyData } from "../components/politics/data/PartyData"
 import {
   getMember,
   getMemberData,
@@ -14,14 +15,14 @@ import {
 import DefaultMemberPage from "../components/politics/member-page/DefaultMemberPage"
 import MemberPage404 from "../components/politics/member-page/MemberPage404"
 
-const DefaultMemberId = -1
 
 /**
  * Gets the member page from the given member id
  * @param {string} memberId The member ID of the member to render
  */
 function getMemberPage(members, memberId) {
-  if(memberId === DefaultMemberId) {
+  const DefaultMemberId = -1
+  if (memberId === DefaultMemberId) {
     return <DefaultMemberPage />
   }
   const member = getMember(members, memberId)
@@ -41,12 +42,18 @@ export default function Index() {
   // Data about all members
   const [members, setMembers] = useState(null)
 
+  // Data about parties
+  const [parties, setParties] = useState(null)
+
   // Currently selected member
   const [currentMemberId, setCurrentMemberId] = useState(-1)
 
   useEffect(() => {
     getMemberData(prismicConfig.endpoint).then(data => {
       setMembers(data)
+    })
+    getPartyData(prismicConfig.endpoint).then(mydata => {
+      setParties(mydata)
     })
   }, [])
 
@@ -63,6 +70,8 @@ export default function Index() {
               <ParliamentGraphic
                 callback={setCurrentMemberId}
                 activeMember={currentMemberId}
+                members={members}
+                parties={parties}
               ></ParliamentGraphic>
             </BorderBox>
           </Col>

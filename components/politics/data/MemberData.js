@@ -27,7 +27,7 @@ const mapToKeyedObject = (array, key = null) => {
 export const getMemberData = apiEndpoint => {
   return Prismic.getApi(apiEndpoint)
     .then(api => {
-      return api.query("") // Need to query by member type
+      return api.query(Prismic.Predicates.at('document.type', 'member')) // Need to query by member type
     })
     .then(response => {
       let data = mapToKeyedObject(response.results, "uid")
@@ -37,12 +37,11 @@ export const getMemberData = apiEndpoint => {
 
 /**
  * Get a member from a member array
- * @param {object} members 
- * @param {string} memberId 
+ * @param {object} members
+ * @param {string} memberId
  */
 export const getMember = (members, memberId) => {
-  console.log(members[memberId])
-  if (members[memberId] === undefined) {
+  if (members === null || members[memberId] === undefined) {
     return false
   }
   return members[memberId].data

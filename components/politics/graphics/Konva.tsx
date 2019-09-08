@@ -1,5 +1,6 @@
 import { getMember } from "../data/MemberData"
 import { Circle } from "react-konva"
+import Parties from '../data/Parties';
 
 export const enlargeCircle = async (circleRef: any, duration: number = 0.2) => {
   return new Promise(resolve => {
@@ -37,16 +38,21 @@ export const shrinkCircle = (circleRef: any, duration: number) => {
 //   })
 // }
 
+/**
+ * Generate the circles for the Parliament Graphic
+ */
 export const generateCircles = (seatingData: any[],
-                                members: object,
-                                parties: object,
-                                callback: any,
-                                activeMember: number) => {
+  members: object,
+  parties: any,
+  callback: any,
+  activeMember: number) => {
   let jsx: any[] = []
-  console.log("Parties", parties)
   seatingData.forEach(element => {
     let active = activeMember === element.id
     let currentMember = getMember(members, element.id)
+
+    const party = parties.getPartyByUid(element.id)
+    const color = party.uid ? party.data.color : "#FEFFFE"
 
     jsx.push(
       <Circle
@@ -58,7 +64,7 @@ export const generateCircles = (seatingData: any[],
         x={element.x}
         y={element.y}
         radius={9}
-        fill={"#FEFFFE"}
+        fill={color}
         key={element.id}
         onClick={() => {
           callback(element.id)

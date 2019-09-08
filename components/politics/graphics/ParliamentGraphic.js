@@ -4,6 +4,7 @@ import React from "react"
 import seatingData from "../data/seatingData"
 import { enlargeCircle, shrinkCircle, animateCircle, generateCircles} from "./Konva"
 import {Layer, Stage} from "react-konva"
+import Parties from "../data/Parties"
 
 /**
  * The visual representation component of parliament
@@ -13,10 +14,13 @@ function ParliamentGraphic({ callback, activeMember, members, parties }) {
   let width = 380
   let height = 400
 
+  // Tying parties to a class
+  let myParties = new Parties(parties)
+
   return (
     <Stage width={width} height={height}>
       <Layer>
-        {generateCircles(seatingData, members, parties, callback, activeMember)}
+        {generateCircles(seatingData, members, myParties, callback, activeMember)}
       </Layer>
     </Stage>
   )
